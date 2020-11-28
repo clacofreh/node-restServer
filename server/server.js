@@ -9,7 +9,12 @@ app.use(bodyParser.urlencoded({extended:false}))
 
 app.use(bodyParser.json())
 
+
+
 app.get('/usuario', (req,res)=>{
+    res.json('get usuario')
+} )
+app.post('/usuario', (req,res)=>{
 
     let body = req.body;
 
@@ -25,10 +30,6 @@ app.get('/usuario', (req,res)=>{
         })   
     }
   
-} )
-
-app.post('/usuario', (req,res)=>{
-    res.json('post usuario')
 } )
 app.put('/usuario', (req,res)=>{
     res.json('put usuario')
