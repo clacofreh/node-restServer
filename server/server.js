@@ -15,9 +15,9 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 
-app.use(require('./routes/usuario'));
 
-const db = 'localhost:3000'
+app.use(require('./routes/index'));
+
 
 mongoose.connect(process.env.URL,{useNewUrlParser:true,useCreateIndex: true,useUnifiedTopology: true }, (err, res) => {
 

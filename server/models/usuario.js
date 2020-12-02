@@ -8,7 +8,7 @@ let Schema = mongoose.Schema;
 
 //--------------------------------------Variable para asignar roles y mensaje si hay error
 let rolesValidos = {
-    values:['ADMIN','PAÑOLERO','PRACTICANTE'],
+    values :['ADMIN','PAÑOLERO','PRACTICANTE','USUARIO'],
     message: '{VALUE} no es un rol valido'
 };
 
@@ -31,7 +31,7 @@ let usuarioSchema = new Schema({
     },
     role: {
         type: String,
-        default: 'USER_ROLE',
+        default: 'USUARIO',
         enum: rolesValidos
       
     },
